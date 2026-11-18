@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:STSP.Pages"
+             x:Class="STSP.Pages.AppShell"
+             Title="STSP">
+
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="STSP" />
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate local:Home}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Mes tâches">
+        <ShellContent Title="Tâches en cours" ContentTemplate="{DataTemplate local:MesTaches}" />
+        <ShellContent Title="Tâches terminées" ContentTemplate="{DataTemplate local:MesTachesTerminees}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Carte">
+        <ShellContent Title="Carte" ContentTemplate="{DataTemplate local:Carte}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Clients">
+        <ShellContent ContentTemplate="{DataTemplate local:Clients}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Messages">
+        <ShellContent ContentTemplate="{DataTemplate local:Messages}" />
+    </FlyoutItem>
+
+    <MenuItem Text="Synchroniser" x:Name="menuSynchroniser"/>
+    <MenuItem Text="Se déconnecter" x:Name="menuSeDeconnecter"/>
+
+    <Shell.FlyoutFooter>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="version: 1.24" Style="{StaticResource FlyoutFooter}"/>
+            <Label Text="Copyright © 2026 STSP. Tous droits réservés" Grid.Row="1" 
+                   Style="{StaticResource FlyoutFooter}"/>
+        </Grid>
+    </Shell.FlyoutFooter>
+
+</Shell>
