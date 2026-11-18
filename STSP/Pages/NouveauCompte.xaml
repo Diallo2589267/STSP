@@ -2,11 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="STSP.Pages.NouveauCompte"
-             Title="NouveauCompte">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Créer un nouveau compte"
+             NavigationPage.HasNavigationBar="False">
+    
+    
+    <VerticalStackLayout Style="{StaticResource Login}">
+        <Label Text="Nom utilisateur" Style="{StaticResource LoginControlHead}" />
+        <Entry Placeholder="" x:Name="txtNomUtilisateur" />
+        <Label Text="Mot de passe" Style="{StaticResource LoginControlHead}" />
+        <Entry Placeholder="" x:Name="txtMotDePasse" />
+        <Button Text="Créer compte" x:Name="btnCreerCompte" />
     </VerticalStackLayout>
+
 </ContentPage>

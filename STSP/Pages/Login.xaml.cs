@@ -12,8 +12,8 @@ public partial class Login : ContentPage
 
     }
 
-    private void btnNouveauCompte_Clicked(object sender, EventArgs e)
+    private async void btnNouveauCompte_Clicked(object sender, EventArgs e)
     {
-
+        await Navigation.PushAsync(new NouveauCompte());
     }
 }
