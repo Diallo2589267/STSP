@@ -9,7 +9,7 @@ public partial class Login : ContentPage
 
     private void btnSeConnecter_Clicked(object sender, EventArgs e)
     {
-
+        ((App)Application.Current!).SeConnecter();
     }
 
     private async void btnNouveauCompte_Clicked(object sender, EventArgs e)

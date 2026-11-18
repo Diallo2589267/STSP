@@ -32,7 +32,7 @@
     </FlyoutItem>
 
     <MenuItem Text="Synchroniser" x:Name="menuSynchroniser"/>
-    <MenuItem Text="Se déconnecter" x:Name="menuSeDeconnecter"/>
+    <MenuItem Text="Se déconnecter" x:Name="menuSeDeconnecter" Clicked="menuSeDeconnecter_Clicked"/>
 
     <Shell.FlyoutFooter>
         <Grid>
