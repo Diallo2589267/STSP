@@ -2,11 +2,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="STSP.Pages.DemandeSupport"
-             Title="DemandeSupport">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Créer une demande de support">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Client" Style="{StaticResource SectionHead}" />
+            <Picker x:Name="pikClients" Title="Choisir un client" SelectedIndexChanged="pikClients_SelectedIndexChanged">
+            </Picker>
+            <Label Text="Adresse" x:Name="lblAdresse" Style="{StaticResource ContentSubHead}" />
+            <Label Text="#Téléphone" x:Name="lblTelephone" Style="{StaticResource ContentSubHead}" />
+            <Label Text="Détails demande" Style="{StaticResource SectionHead}" />
+            <Label x:Name="lblDateDemande" Text="" Style="{StaticResource ContentSubHead}" />
+            <Label Text="Type de la demande" Style="{StaticResource ControlHead}" />
+            <Entry x:Name="txtTypeDemande" />
+            <Label Text="Détails" Style="{StaticResource ControlHead}" />
+            <Editor x:Name="txtDetails" HeightRequest="100" />
+            <Label Text="Date prévue de l'intervention" Style="{StaticResource ControlHead}" />
+            <DatePicker x:Name="pikDateIntervention"/>
+            <Button x:Name="btnEnregistrer" Text="Enregistrer" Clicked="btnEnregistrer_Clicked" />
+            <Button x:Name="btnSupprimer" Text="Supprimer" Style="{StaticResource Secondaire}" Clicked="btnSupprimer_Clicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

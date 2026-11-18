@@ -6,4 +6,19 @@ public partial class DemandeSupport : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btnEnregistrer_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void btnSupprimer_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void pikClients_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }
