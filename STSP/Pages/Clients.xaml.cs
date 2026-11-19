@@ -6,4 +6,9 @@ public partial class Clients : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void ToolbarItem_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.Navigation.PushAsync(new NouveauClient());
+    }
 }

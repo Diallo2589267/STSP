@@ -6,4 +6,9 @@ public partial class NouveauClient : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btnEnregistrer_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
