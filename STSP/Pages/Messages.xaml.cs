@@ -6,4 +6,9 @@ public partial class Messages : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void btnEnvoyer_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
